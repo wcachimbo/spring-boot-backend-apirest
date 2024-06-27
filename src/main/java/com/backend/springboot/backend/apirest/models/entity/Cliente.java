@@ -26,7 +26,7 @@ public class Cliente {
     @NotEmpty(message = "El Apellido  no puede ser vacio")
     private String apellido;
     @NotEmpty(message = "El correo  no puede ser vacio")
-    @Email(message = "Ingrese un correo valido" , regexp=".+@.+\\..+")
+    @Email(message = "Ingrese un correo valido" ,regexp=".+@.+\\..+")
     private String email;
 
     @Column(name="create_at")
