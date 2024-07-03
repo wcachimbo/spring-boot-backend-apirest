@@ -11,6 +11,8 @@ import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.Size;
+
 
 import java.util.Date;
 
@@ -21,6 +23,7 @@ public class Cliente {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
 
+    @Size (min=4, max = 20, message = "El tamaño tiene que estar entre 4 y12")
     @Column(nullable = false)
     @NotEmpty(message = "El nombre no puede ser vacio")
     private String nombre;
